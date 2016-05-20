@@ -1,0 +1,15 @@
+// Dependencies
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+// Style task
+gulp.task('styles', function() {
+  gulp.src('static/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./static/css/'));
+});
+
+// Watch task
+gulp.task('watch',function() {
+  gulp.watch('static/sass/**/*.scss', ['styles']);
+});
