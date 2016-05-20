@@ -1,0 +1,77 @@
+<html lang="fr" >
+  <head>
+
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Angular Material Starterkit</title>
+    <!-- / Metadata -->
+
+    <!-- Styles -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/css/angular-material.min.css">
+    <link rel="stylesheet" href="static/css/app.css">
+    <!-- / Styles -->
+
+  </head>
+  <body ng-app="MyApp" ng-controller="MyController" ng-cloak>
+
+    <div layout="row">
+      <div flex="100" layout="column" class="content">
+        <div flex="10" class="content-header">
+          <md-button ng-controller="MenuController" ng-click="openMenu()" class="md-primary">
+            Toggle menu
+          </md-button>
+        </div>
+        <div flex class="content-text">
+          <span ng-bind="Content" ui-content></span>
+        </div>
+      </div>
+      <md-sidenav flex="15" md-component-id="right" class="sidenav md-sidenav-right">
+        <img src="https://material.angularjs.org/latest/img/icons/angular-logo.svg" class="logo">
+        <h1>Angular Material</h1>
+
+        <!-- Tabs -->
+        <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab>
+            <md-tab-label>
+              <tab class="tab-label">One</tab>
+            </md-tab-label>
+            <md-tab-body>
+              <a href="#" ng-controller="MenuController" ng-click="clickLink('Lorem')">Lorem</a>
+              <a href="#" ng-controller="MenuController" ng-click="clickLink('Ipsum')">Ipsum</a>
+              <a href="#" ng-controller="MenuController" ng-click="clickLink('Dolor')">Dolor</a>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <tab class="tab-label">Two</tab>
+            </md-tab-label>
+            <md-tab-body>
+              <a href="#" ng-click="clickLink('Sit')">Sit</a>
+              <a href="#" ng-click="clickLink('Amet')">Amet</a>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <tab class="tab-label">Three</tab>
+            </md-tab-label>
+            <md-tab-body>
+              <a href="#" ng-click="clickLink('Consectetur')">Consectetur</a>
+              <a href="#" ng-click="clickLink('Adipiscing')">Adipiscing</a>
+              <a href="#" ng-click="clickLink('Elit')">Elit</a>
+            </md-tab-body>
+          </md-tab>
+        </md-tabs>
+        <!-- / Tabs -->
+
+      </md-sidenav>
+    </div>
+
+  </body>
+
+  <!-- JS -->
+  <script src="js/lib/require.js" data-main="js/main.js"></script>
+  <!-- / JS -->
+
+</html>
